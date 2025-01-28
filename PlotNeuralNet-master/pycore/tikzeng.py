@@ -79,12 +79,14 @@ def to_ConvConvRelu( name, s_filer=256, n_filer=(64,64), offset="(0,0,0)", to="(
 
 
 # Pool
-def to_Pool(name, offset="(0,0,0)", to="(0,0,0)", width=1, height=32, depth=32, opacity=0.5, caption=" "):
+def to_Pool(name, offset="(0,0,0)", to="(0,0,0)", width=1, height=32, depth=32, opacity=0.5, caption=" ", h=256, c=64):
     return r"""
 \pic[shift={ """+ offset +""" }] at """+ to +""" 
     {Box={
         name="""+name+""",
         caption="""+ caption +r""",
+        xlabel={{"""+ str(c) +""", }},
+        zlabel="""+ str(h) +""",
         fill=\PoolColor,
         opacity="""+ str(opacity) +""",
         height="""+ str(height) +""",
