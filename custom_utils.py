@@ -6,7 +6,7 @@ Created on Tue Jan 28 20:20:39 2025
 """
 
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
+# from matplotlib.patches import Rectangle
 
 class Layers:
     def __init__(self, name, x_start, y_start, interval, width, height):
